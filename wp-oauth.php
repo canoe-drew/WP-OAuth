@@ -4,7 +4,7 @@
 Plugin Name: WP-OAuth
 Plugin URI: http://github.com/perrybutler/wp-oauth
 Description: A WordPress plugin that allows users to login or register by authenticating with an existing Google, Facebook, LinkedIn, Github, Reddit or Windows Live account via OAuth 2.0. Easily drops into new or existing sites, integrates with existing users.
-Version: 0.4.1
+Version: 0.4.2
 Author: Perry Butler
 Author URI: http://glassocean.net
 License: GPL2
@@ -23,7 +23,7 @@ Class WPOA {
 	// ==============
 
 	// set a version that we can use for performing plugin updates, this should always match the plugin version:
-	const PLUGIN_VERSION = "0.4.1";
+	const PLUGIN_VERSION = "0.4.2";
 	
 	// singleton class pattern:
 	protected static $instance = NULL;
@@ -93,6 +93,9 @@ Class WPOA {
 		'wpoa_github_api_enabled' => 0,									// 0, 1
 		'wpoa_github_api_id' => '',										// any string
 		'wpoa_github_api_secret' => '',									// any string
+		'wpoa_idq_api_enabled' => 0,									// 0, 1
+		'wpoa_idq_api_id' => '',										// any string
+		'wpoa_idq_api_secret' => '',									// any string
 		'wpoa_itembase_api_enabled' => 0,								// 0, 1
 		'wpoa_itembase_api_id' => '',									// any string
 		'wpoa_itembase_api_secret' => '',								// any string
@@ -726,6 +729,7 @@ Class WPOA {
 		$html .= $this->wpoa_login_button("facebook", "Facebook", $atts);
 		$html .= $this->wpoa_login_button("linkedin", "LinkedIn", $atts);
 		$html .= $this->wpoa_login_button("github", "GitHub", $atts);
+		$html .= $this->wpoa_login_button("idq", "idQ", $atts);
 		$html .= $this->wpoa_login_button("itembase", "itembase", $atts);
 		$html .= $this->wpoa_login_button("reddit", "Reddit", $atts);
 		$html .= $this->wpoa_login_button("windowslive", "Windows Live", $atts);

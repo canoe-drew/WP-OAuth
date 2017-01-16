@@ -3,8 +3,8 @@ Contributors: hectavex
 Donate link: http://glassocean.net
 Tags: login, membership, users, registration, oauth, social, social networking, community, security, connect with, authentication, authorization
 Requires at least: 4.0
-Tested up to: 4.1
-Stable tag: 0.4.1
+Tested up to: 4.7.1
+Stable tag: 0.4.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -131,6 +131,10 @@ The latter two technologies are for enterprise-scale apps and environments where
 3. The Login page can easily be customized.
 
 == Changelog ==
+
+= 0.4.2 =
+* Added support for WP OAuth Server provider
+* Added support for idQ identity provider (https://idquanta.com)
 
 = 0.4.1 =
 * Removed demo from Settings page, it was a bad link.
